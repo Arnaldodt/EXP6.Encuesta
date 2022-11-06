@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/recursos/style.css">
+</head>
+<body>
+    <main>
+        <form method="post" action="/resultado">
+            <ul>
+                <li>
+                    <label for="Name">Your Name:</label>
+                </li>
+                <li>
+                    <input type="text" name="Name" id="Name" placeholder="Your Name">
+                </li>
+
+                <li>
+                    <label for="Location">Dojo Location</label>
+                </li>
+                <li>
+                    <select name="Location" id="Location">
+                        <% for (var x in Location) { %>
+                            <option value="<%= x %>"><%= Location[x] %></option>
+                        <%}%>
+                    </select>
+                </li>
+
+                <li>
+                    <label for="Language">Favorite Language</label>
+                </li>
+                <li>
+                    <select name="Language" id="Language">
+                        <% for (var x in Language) { %>
+                            <option value="<%= x %>"><%= Language[x] %></option>
+                        <%}%>
+                    </select>
+                </li>
+
+                <li class="ancho">
+                    <label for="Comment">Comment (optional)</label>
+                </li>
+                <li class="ancho">
+                    <textarea name="Comment" id="Comment" cols="30" rows="10"></textarea>
+                </li>
+                <li class="ancho derecha">
+                    <button type="submit">Submit</button>
+                </li>
+
+            </ul>
+        </form>
+    </main>
+</body>
+</html>

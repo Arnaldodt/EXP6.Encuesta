@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/recursos/style.css">
+</head>
+<body>
+    <main>
+        <form method="GET" action="/">
+            <ul>
+                <li class="ancho">
+                    Submitted Information
+                </li>
+                <li>
+                    Name:
+                </li>
+                <li>
+                    <%= encuesta.Name %>
+                </li>
+
+                <li>
+                    Dojo Location:
+                </li>
+                <li>
+                    <%= encuesta.Location %>
+                </li>
+
+                <li>
+                    Favorite Language:
+                </li>
+                <li>
+                    <%= encuesta.Language %>
+                </li>
+
+                <li class="ancho">
+                    Comment:
+                </li>
+                <li class="ancho">
+                    <%= encuesta.Comment %>
+                </li>
+                <li class="ancho derecha">
+                    <button type="submit">Go Back</button>
+                </li>
+
+            </ul>
+        </form>
+    </main>
+</body>
+</html>
